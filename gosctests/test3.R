@@ -19,7 +19,7 @@ max_inner_ball <- function(P, x0 = NULL, algorithm = "NLOPT_LN_COBYLA",
   b <- P@b
   n <- ncol(A)
   
-  #initial guess(not quite important?)
+  #initial guess
   if (is.null(x0)) {
     norms <- sqrt(rowSums(A^2))
     minr <- min(b / norms)
